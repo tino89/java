@@ -1,0 +1,18 @@
+WARNING [2018-Mar-30 06:31:47 PM] tino chagua callupe
+ERROR [2018-Mar-30 06:31:47 PM] tino chagua callupe
+ERROR [2018-Mar-30 06:31:47 PM] prueba
+WARNING [2018-Mar-30 06:31:56 PM] tino chagua callupe
+ERROR [2018-Mar-30 06:31:56 PM] tino chagua callupe
+ERROR [2018-Mar-30 06:31:57 PM] prueba
+WARNING [2018-Mar-30 06:33:40 PM] tino chagua callupe
+ERROR [2018-Mar-30 06:33:40 PM] tino chagua callupe
+ERROR [2018-Mar-30 06:33:40 PM] prueba
+MESSAGE [2018-Mar-30 06:33:40 PM] prueba
+WARNING [2018-Apr-02 11:10:52 PM] tino chagua callupe
+ERROR [2018-Apr-02 11:10:52 PM] tino chagua callupe
+ERROR [2018-Apr-02 11:10:52 PM] prueba
+MESSAGE [2018-Apr-02 11:10:52 PM] prueba
+WARNING [2018-Apr-03 12:28:58 AM] tino chagua callupe
+ERROR [2018-Apr-03 12:28:58 AM] tino chagua callupe
+ERROR [2018-Apr-03 12:28:59 AM] prueba
+MESSAGE [2018-Apr-03 12:28:59 AM] prueba
