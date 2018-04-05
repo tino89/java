@@ -3,6 +3,7 @@ package com.pe;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
+
 import com.pe.common.Marked;
 import com.pe.common.Message;
 import com.pe.config.ConfigLogger;
@@ -10,7 +11,6 @@ import com.pe.logger.ConsoleLogger;
 import com.pe.logger.DataBaseLogger;
 import com.pe.logger.FileLogger;
 import com.pe.logger.GenericLogger;
-
 
 /**
  * @author tino
@@ -44,16 +44,16 @@ public class JobLogger {
 	 * @param warning
 	 * @param error
 	 * @throws Exception
-	 * Description: write log depending which type of log these are (message, warning, error)
+	 *             Description: write log depending which type of log these are
+	 *             (message, warning, error)
 	 */
 	public void saveLog(String messageText, boolean message, boolean warning, boolean error) throws Exception {
 
-		if ((!config.isLogError() && !config.isLogMessage() && !config.isLogWarning()) ||
-				(!message && !warning && !error)) {
+		if ((!config.isLogError() && !config.isLogMessage() && !config.isLogWarning())
+				|| (!message && !warning && !error)) {
 			throw new Exception("Error or Warning or Message must be specified");
 		}
-		
-		
+
 		if (StringUtils.isEmpty(messageText)) {
 			throw new Exception("Message is empty");
 		}
@@ -107,12 +107,15 @@ public class JobLogger {
 
 		switch (marked) {
 		case ERROR:
+			config.setLogError(true);
 			saveLog(msg, false, false, true);
 			break;
 		case WARNING:
+			config.setLogWarning(true);
 			saveLog(msg, false, true, false);
 			break;
 		case MESSAGE:
+			config.setLogMessage(true);
 			saveLog(msg, true, false, false);
 			break;
 		}
@@ -125,9 +128,8 @@ public class JobLogger {
 		}
 
 	}
-	
-	
-		/**
+
+	/**
 	 * @return the list
 	 */
 	public List<Message> getList() {
@@ -135,7 +137,8 @@ public class JobLogger {
 	}
 
 	/**
-	 * @param list the list to set
+	 * @param list
+	 *            the list to set
 	 */
 	public void setList(List<Message> list) {
 		this.list = list;

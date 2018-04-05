@@ -1,4 +1,3 @@
-package test;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -6,6 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import com.pe.JobLogger;
+import com.pe.common.Marked;
 import com.pe.config.ConfigLogger;
 
 public class LoggerTest {
@@ -36,9 +36,7 @@ public class LoggerTest {
 		logger.saveLog(MESSAGE_LOG, true, true, true);
 		assertEquals(3, logger.getList().size());
 	}
-	
-	
-	
+
 	@Test
 	// show all types of log (error, message, warning)
 	public void OneTypesLogtoShow() throws Exception {
@@ -50,7 +48,6 @@ public class LoggerTest {
 		logger.saveLog(MESSAGE_LOG, true, true, true);
 		assertEquals(1, logger.getList().size());
 	}
-
 
 	@Test
 	/*
@@ -87,6 +84,17 @@ public class LoggerTest {
 			thrown = true;
 		}
 		assertTrue(thrown);
+
+	}
+
+	@Test
+	public void WriteLogTypeMessage() throws Exception {
+
+		config.setLogToConsole(true);
+		config.setLogError(true);
+		JobLogger logger = new JobLogger(config);		
+		logger.saveLog(MESSAGE_LOG, Marked.MESSAGE);			
+		assertEquals(Marked.MESSAGE, logger.getList().get(0).getLevel());
 
 	}
 
