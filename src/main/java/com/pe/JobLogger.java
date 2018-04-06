@@ -32,10 +32,18 @@ public class JobLogger {
 	public JobLogger(ConfigLogger config) throws Exception {
 		this.config = config;
 		this.validateConfig();
-		this.log = new ConsoleLogger();
-		this.file = new FileLogger();
-		this.db = new DataBaseLogger();
 
+		if (config.isLogToConsole()) {
+			this.log = new ConsoleLogger();
+		}
+
+		if (config.isLogToFile()) {
+			this.file = new FileLogger();
+		}
+
+		if (config.isLogToDatabase()) {
+			this.db = new DataBaseLogger();
+		}
 	}
 
 	/**

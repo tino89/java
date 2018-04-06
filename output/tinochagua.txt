@@ -16,3 +16,7 @@ WARNING [2018-Apr-03 12:28:58 AM] tino chagua callupe
 ERROR [2018-Apr-03 12:28:58 AM] tino chagua callupe
 ERROR [2018-Apr-03 12:28:59 AM] prueba
 MESSAGE [2018-Apr-03 12:28:59 AM] prueba
+WARNING [2018-Apr-06 01:44:12 AM] tino chagua callupe
+ERROR [2018-Apr-06 01:44:12 AM] tino chagua callupe
+ERROR [2018-Apr-06 01:44:12 AM] prueba
+MESSAGE [2018-Apr-06 01:44:12 AM] prueba

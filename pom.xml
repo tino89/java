@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>belatrixExamenTecnico</groupId>
 	<artifactId>belatrixExamenTecnico</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<dependencies>
 		<dependency>
@@ -36,6 +36,7 @@
 
 
 	<build>
+		<finalName>Logger</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
